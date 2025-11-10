@@ -1,0 +1,32 @@
+moderation:
+  # Words that will trigger moderation actions when found in messages (case-insensitive)
+  banned_words:
+    - spam
+    - scam
+    - troll
+    - idiot
+    - trash
+  # Number of infractions before a user is warned
+  warn_threshold: 1
+  # Number of infractions before a user is banned
+  ban_threshold: 3
+
+scheduler:
+  # If true, main.py will run the moderation cycle periodically
+  enabled: true
+  # Interval in seconds between moderation sweeps (can be overridden via CLI)
+  interval_seconds: 20
+
+proxies:
+  # Toggle proxy use on/off
+  enabled: false
+  # Example proxy list; replace with real proxies if needed
+  pool:
+    - http://user:password@127.0.0.1:8080
+
+discord:
+  # Placeholder values for reference if integrating with Discord API or device automation
+  guild_id: "000000000000000000"
+  monitored_channels:
+    - "general"
+    - "support"
